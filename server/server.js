@@ -11,7 +11,16 @@ const db = mongoose.connection
 db.on("error",(error)=> console.log(error))
 db.once("open",()=> console.log("connected to database"))
 
+
+
 app.use(express.json())
+
+app.use(function(req,res,next) {
+    res.setHeader("Access-Control-Allow-Origin","http://localhost:3000")
+    res.setHeader("Access-Control-Allow-method", "GET,PUT,POST,DELETE,OPTIONS")
+    res.setHeader("X-Powered-By", null)
+    next()
+})
 
 app.get("/", (req, res) => {
     res.status(200).send("welcome back after a very long timeeeee")

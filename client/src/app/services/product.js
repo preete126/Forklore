@@ -1,5 +1,5 @@
 import axios from "../util/axios"
 
-export const GetAllCategory = ()=>{
-    return axios.get("product/category")
+export const GetAllProducts = ()=>{
+    return axios.get("product/all")
 }

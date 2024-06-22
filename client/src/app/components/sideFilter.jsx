@@ -6,7 +6,7 @@ import { GiDogBowl, GiCoffeeCup } from "react-icons/gi";
 import { PiCookingPotThin, PiBowlSteamThin } from "react-icons/pi";
 import { MdOutlineFreeBreakfast } from "react-icons/md";
 
-function SideFilter() {
+function SideFilter({categoryProducts}) {
     const categories = useRef(
         [
             {
